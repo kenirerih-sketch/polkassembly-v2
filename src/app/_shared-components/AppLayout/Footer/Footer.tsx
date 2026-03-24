@@ -164,15 +164,18 @@ function Footer() {
 				<div className='pb-3 pt-5 text-sm font-medium'>
 					<div>
 						<div className={styles.footer_container_2_link_a_p}>
-							<div className='flex flex-col gap-2 lg:flex-row'>
-								<p>{t('Footer.aHouseOfCommonsInitiative')}</p>
-								<p>
-									{t('Footer.polkaLabsPrivateLimited')} {new Date().getFullYear()}
-								</p>
-							</div>
-							<div>
-								<p className='block sm:inline'>{t('Footer.allRightsReservedYear')}</p>
-							</div>
+							<p>
+								{t('Footer.archivedLabel')}
+								{' · '}
+								<a
+									href='https://polkassembly.io'
+									target='_blank'
+									rel='noopener noreferrer'
+									className='text-text_pink hover:underline'
+								>
+									polkassembly.io
+								</a>
+							</p>
 						</div>
 					</div>
 				</div>

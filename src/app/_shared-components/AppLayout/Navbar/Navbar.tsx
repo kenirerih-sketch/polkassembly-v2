@@ -5,12 +5,11 @@
 'use client';
 
 import Link from 'next/link';
-import { usePathname } from 'next/navigation';
 import { Button } from '@ui/Button';
 import { useUser } from '@/hooks/useUser';
 import { useTranslations } from 'next-intl';
 import { AuthClientService } from '@/app/_client-services/auth_client_service';
-import { ELocales, ENetwork, ESetIdentityStep } from '@/_shared/types';
+import { ELocales, ESetIdentityStep } from '@/_shared/types';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/app/_shared-components/Select/Select';
 import { setLocaleCookie } from '@/app/_client-utils/setCookieFromServer';
 import { useUserPreferences } from '@/hooks/useUserPreferences';
@@ -26,8 +25,6 @@ import { ShieldMinusIcon } from 'lucide-react';
 import Image from 'next/image';
 import dynamic from 'next/dynamic';
 import { isMimirDetected } from '@/app/_client-services/isMimirDetected';
-import { getCurrentNetwork } from '@/_shared/_utils/getCurrentNetwork';
-import { NETWORKS_DETAILS } from '@/_shared/_constants/networks';
 import classes from './Navbar.module.scss';
 import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from '../../DropdownMenu';
 import Address from '../../Profile/Address/Address';
@@ -35,7 +32,7 @@ import NetworkDropdown from '../../NetworkDropdown/NetworkDropdown';
 import RPCSwitchDropdown from '../RpcSwitch/RPCSwitchDropdown';
 import PaLogo from '../PaLogo';
 import ThemeToggleButton from '../../ThemeToggleButton';
-import AnnouncementBanner from './AnnouncementBanner';
+import ArchiveBanner from './ArchiveBanner';
 
 const Search = dynamic(() => import('../Search/Search'), { ssr: false });
 
@@ -52,14 +49,6 @@ function Navbar() {
 	const t = useTranslations();
 	const { userPreferences, setUserPreferences } = useUserPreferences();
 	const [isModalOpen, setModalOpen] = useState(false);
-
-	const network = getCurrentNetwork();
-	const pathname = usePathname();
-
-	const allowedPaths = [/^\/post\/[^/]+$/, /^\/proposal\/[^/]+$/, /^\/referenda\/[^/]+$/, /^\/bounty\/[^/]+$/, /^\/child-bounty\/[^/]+$/];
-	const isHomePage = pathname === '/';
-
-	const shouldShowBanner = isHomePage || allowedPaths.some((path) => path.test(pathname));
 
 	const handleLocaleChange = async (locale: ELocales) => {
 		setLocaleCookie(locale);
@@ -377,25 +366,7 @@ function Navbar() {
 					</div>
 				)}
 			</nav>
-			{[ENetwork.KUSAMA, ENetwork.ASSETHUB_KUSAMA, ENetwork.POLKADOT].includes(network) && shouldShowBanner && (
-				<AnnouncementBanner
-					message={
-						<p className='flex flex-wrap items-center gap-x-1 text-sm'>
-							{t('AnnouncementBanner.assethubMigration', {
-								network: network === ENetwork.ASSETHUB_KUSAMA ? NETWORKS_DETAILS[ENetwork.KUSAMA].name : NETWORKS_DETAILS[`${network}`].name
-							})}
-							<Link
-								href='https://docs.google.com/document/d/1XR3vL2p4QV0wC7FrlC8eN-q62BqNFTFElbj21wEmMGg/edit?tab=t.0#heading=h.vxykbd6ai7n7'
-								className='underline'
-								target='_blank'
-								rel='noopener noreferrer'
-							>
-								{t('AnnouncementBanner.learnMore')}
-							</Link>
-						</p>
-					}
-				/>
-			)}
+			<ArchiveBanner />
 		</div>
 	);
 }

@@ -915,7 +915,8 @@
 		"allRightsReserved": "All rights reserved.",
 		"polkaLabsPrivateLimited": "Polka Labs Private Limited",
 		"aHouseOfCommonsInitiative": "A House of Commons Initiative.",
-		"allRightsReservedYear": "All rights reserved."
+		"allRightsReservedYear": "All rights reserved.",
+		"archivedLabel": "Polkassembly · Archived 2026"
 	},
 	"Preimages": {
 		"hash": "Hash",
@@ -1801,7 +1802,8 @@
 	"AnnouncementBanner": {
 		"assethubMigration": "Notice: {network} has migrated to AssetHub. Balances, data, referenda, and other on-chain activity has moved to AssetHub.",
 		"learnMore": "Learn more",
-		"polkadotMigration": "Notice: Polkadot is undergoing AssetHub migration. Some features may be unavailable during the migration."
+		"polkadotMigration": "Notice: Polkadot is undergoing AssetHub migration. Some features may be unavailable during the migration.",
+		"archiveMessage": "Polkassembly is archived. Read-only through May 31, 2026."
 	},
 	"ForgotPassword": {
 		"title": "Forgot Password",

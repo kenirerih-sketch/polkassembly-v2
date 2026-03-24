@@ -950,7 +950,8 @@
 		"allRightsReserved": "版权所有。",
 		"polkaLabsPrivateLimited": "Polka Labs Private Limited",
 		"aHouseOfCommonsInitiative": "House of Commons 倡议。",
-		"allRightsReservedYear": "版权所有。"
+		"allRightsReservedYear": "版权所有。",
+		"archivedLabel": "Polkassembly · 2026年归档"
 	},
 	"Preimages": {
 		"hash": "哈希",
@@ -1771,6 +1772,7 @@
 	"AnnouncementBanner": {
 		"assethubMigration": "{network}已迁移至AssetHub。余额、数据、国民投票、以及其他链上活动已迁移至AssetHub。",
 		"learnMore": "了解更多",
-		"polkadotMigration": "Polkadot正在迁移至AssetHub。一些功能可能在迁移期间不可用。"
+		"polkadotMigration": "Polkadot正在迁移至AssetHub。一些功能可能在迁移期间不可用。",
+		"archiveMessage": "Polkassembly已归档。2026年5月31日前仅供只读访问。"
 	}
 }
