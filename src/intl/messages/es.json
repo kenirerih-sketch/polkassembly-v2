@@ -951,7 +951,8 @@
 		"allRightsReserved": "Todos los derechos reservados.",
 		"polkaLabsPrivateLimited": "Polka Labs Private Limited",
 		"aHouseOfCommonsInitiative": "Una iniciativa de House of Commons.",
-		"allRightsReservedYear": "Todos los derechos reservados."
+		"allRightsReservedYear": "Todos los derechos reservados.",
+		"archivedLabel": "Polkassembly · Archivado 2026"
 	},
 	"Preimages": {
 		"hash": "Hash",
@@ -1772,6 +1773,7 @@
 	"AnnouncementBanner": {
 		"assethubMigration": "Nota: {network} se ha migrado a AssetHub; todas las acciones de gobernanza en cadena han sido movidas.",
 		"learnMore": "Más información",
-		"polkadotMigration": "Nota: Polkadot está en proceso de migración a AssetHub. Algunas características pueden estar no disponibles durante la migración."
+		"polkadotMigration": "Nota: Polkadot está en proceso de migración a AssetHub. Algunas características pueden estar no disponibles durante la migración.",
+		"archiveMessage": "Polkassembly está archivado. Solo lectura hasta el 31 de mayo de 2026."
 	}
 }

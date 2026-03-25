@@ -22,7 +22,7 @@ export default function OverviewHeading() {
 						rel='noopener noreferrer'
 						className='flex items-center gap-2 text-sm font-medium text-text_pink'
 					>
-						{t('readAnnouncement')} <ExternalLink className='h-4 w-4' />
+						polkassembly.io <ExternalLink className='h-4 w-4' />
 					</a>
 				</div>
 			</div>
