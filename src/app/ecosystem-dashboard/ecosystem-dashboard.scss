@@ -1,0 +1,48 @@
+// Copyright 2019-2025 @polkassembly/polkassembly authors & contributors
+// This software may be modified and distributed under the terms
+// of the Apache-2.0 license. See the LICENSE file for details.
+
+// Scoped theme tokens for the Ecosystem Observatory (does not affect global Polkassembly theme).
+.ecosystem-observatory {
+	--bg: #f8fafc;
+	--bg-soft: #f1f5f9;
+	--bg-elev: #ffffff;
+	--text: #0f172a;
+	--text-muted: #475569;
+	--text-faint: #64748b;
+	--text-dim: #94a3b8;
+	--border: #e2e8f0;
+	--border-strong: #cbd5e1;
+	--accent: #e6007a;
+	--grid: #e2e8f0;
+	--bar-fill: #0f172a;
+	--tooltip-bg: #0f172a;
+	--tooltip-text: #ffffff;
+	--pie-1: #1e293b;
+	--pie-2: #475569;
+	--pie-3: #94a3b8;
+	--pie-4: #cbd5e1;
+	--pie-5: #e2e8f0;
+
+	&[data-theme='dark'] {
+		--bg: #0b0f17;
+		--bg-soft: #111827;
+		--bg-elev: #151c28;
+		--text: #f1f5f9;
+		--text-muted: #94a3b8;
+		--text-faint: #64748b;
+		--text-dim: #475569;
+		--border: #1e293b;
+		--border-strong: #334155;
+		--accent: #ff4da6;
+		--grid: #1e293b;
+		--bar-fill: #e2e8f0;
+		--tooltip-bg: #f8fafc;
+		--tooltip-text: #0f172a;
+		--pie-1: #f1f5f9;
+		--pie-2: #cbd5e1;
+		--pie-3: #94a3b8;
+		--pie-4: #475569;
+		--pie-5: #334155;
+	}
+}
