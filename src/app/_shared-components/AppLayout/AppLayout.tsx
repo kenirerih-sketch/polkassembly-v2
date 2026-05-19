@@ -11,10 +11,12 @@ import AppSidebar from './AppSidebar/AppSidebar';
 import SuccessModal from '../SuccessModal/SuccessModal';
 import ChatPopup from '../Klara/ChatPopup';
 import NewsBannerWrapper from '../NewsBanner/NewsBannerWrapper';
+import { CollapseSidebarOnRoutes } from './CollapseSidebarOnRoutes';
 
 export default function AppLayout({ children }: { children: React.ReactNode }) {
 	return (
 		<main className='relative flex flex-1'>
+			<CollapseSidebarOnRoutes />
 			<AppSidebar />
 
 			<CustomSidebarTrigger />
